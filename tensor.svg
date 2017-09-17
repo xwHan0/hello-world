@@ -74,21 +74,35 @@
   <g id="common_func">
     <text x="10" y="15">Common Function</text>
     <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
-    <line x1="30" y1="15" x2="30" y2="400" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
     <use xlink:href="#func_box6" x="30" y="30"/>
     <text x="65" y="45">(abs[!] tsr)</text>
-    <text x="65" y="75">(ceil[!] tsr bound-tsr)</text>
-    <text x="65" y="105">(floor[!] tsr bound-tsr)</text>
+    <text x="65" y="75">(ceil[!] tsr [bound-tsr=1])</text>
+    <text x="65" y="105">(floor[!] tsr [bound-tsr=1])</text>
+  </g>
+  
+  <g id="compare_func">
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text>
+      <tspan x="35" y="45" fill="blue">Compare Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan> &amp; tsrs)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=ne,le,lt,ge,gt</tspan>
+    </text>
+    <use xlink:href="#func_box" x="0" y="90"/>
+    <text x="35" y="105">(ne tsrA tsrB)</text>
+    <use xlink:href="#func_box" x="0" y="120"/>
+    <text x="35" y="135">(cmp tsrA tsrB)</text>
   </g>
   
   <g id="expoent_func">
-    <text x="10" y="15">Expoent Function</text>
-    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
-    <line x1="30" y1="15" x2="30" y2="400" stroke="#000000"/>
-    <use xlink:href="#func_box6" x="30" y="30"/>
-    <text x="65" y="45">(sqrt[!] tsr)</text>
-    <text x="65" y="75">(cbrt[!] tsr)</text>
-    <text x="65" y="105">(log10[!] tsr)</text>
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text>
+      <tspan x="35" y="45" fill="blue">Exponent Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=sqrt,cbrt,log,log10,ln,logistic</tspan>
+    </text>
+    <use xlink:href="#func_box" x="0" y="90"/>
+    <text x="35" y="105">(pow[!] tsr &amp; exponent-num)</text>
   </g>
   
   <g id="argular_func">
@@ -109,6 +123,18 @@
     </text>
   </g>
   
+  <g id="ele_by">
+    <text x="10" y="15">Element Wise</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <use xlink:href="#arithmatic_func" x="30" y="30"/>
+    <use xlink:href="#compare_func" x="30" y="140"/>
+    <use xlink:href="#expoent_func" x="30" y="280"/>
+    <use xlink:href="#argular_func" x="30" y="390"/>
+    <use xlink:href="#statistic_func" x="30" y="450"/>
+    <use xlink:href="#common_func" x="30" y="600"/>
+  </g>
+  
   <g id="decomp_func">
     <use xlink:href="#func_2box" x="0" y="30"/>
     <text y="45">
@@ -116,17 +142,6 @@
       <tspan x="55" dy="20">Syntax: (decomp-</tspan><tspan fill="green">xxx</tspan><tspan> tsr)</tspan>
       <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=cholesky,eigenvalue,lu,qr,svd</tspan>
     </text>
-  </g>
-  
-  <g id="ele_by">
-    <text x="10" y="15">Element Wise</text>
-    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
-    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
-    <use xlink:href="#arithmatic_func" x="30" y="30"/>
-    <use xlink:href="#common_func" x="30" y="170"/>
-    <use xlink:href="#expoent_func" x="30" y="420"/>
-    <use xlink:href="#argular_func" x="30" y="670"/>
-    <use xlink:href="#statistic_func" x="30" y="680"/>
   </g>
   
   <g id="matrix">
