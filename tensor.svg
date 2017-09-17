@@ -79,6 +79,8 @@
     <text x="65" y="45">(abs[!] tsr)</text>
     <text x="65" y="75">(ceil[!] tsr [bound-tsr=1])</text>
     <text x="65" y="105">(floor[!] tsr [bound-tsr=1])</text>
+    <text x="65" y="135">(round[!] tsr)</text>
+    <text x="65" y="165">(clamp[!] tsr min max)</text>
   </g>
   
   <g id="compare_func">
@@ -106,11 +108,12 @@
   </g>
   
   <g id="argular_func">
-    <use xlink:href="#func_2box" x="0" y="30"/>
+    <use xlink:href="#func_3box" x="0" y="30"/>
     <text y="45">
       <tspan x="35" fill="blue">Argular Function</tspan>
       <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] tsr)</tspan>
-      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=sin,cos,tan,asin,acos,atan,tanh,cosh</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=sin,cos,tan,asin,acos,atan,tanh</tspan>
+      <tspan x="35" dy="20">cosh, to-degress, to-radians</tspan>
     </text>
   </g>
   
@@ -131,9 +134,39 @@
     <use xlink:href="#compare_func" x="30" y="140"/>
     <use xlink:href="#expoent_func" x="30" y="280"/>
     <use xlink:href="#argular_func" x="30" y="390"/>
-    <use xlink:href="#statistic_func" x="30" y="450"/>
+    <use xlink:href="#statistic_func" x="30" y="480"/>
     <use xlink:href="#common_func" x="30" y="600"/>
   </g>
+
+  <g id="tensor_pro">
+    <use xlink:href="#func_3box" x="0" y="30"/>
+    <text y="45">
+      <tspan x="35" fill="blue">Property</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan> tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=trace,det,density,dimension,shape</tspan>
+    </text>
+  </g>
+
+  <g id="tensor_calc">
+    <text x="10" y="15">Basic Calculate Function</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(transpose[!] tsr [ordering])</text>
+    <text x="65" y="75">(transform[!] tsr v)</text>
+    <text x="65" y="105">(reshape[!] tsr shape])</text>
+    <text x="65" y="135">(inner-product[!] &amp; tsrs)</text>
+    <text x="65" y="165">(output-product[!] &amp; tsrs)</text>
+  </g>
+  
+  <g id="tensor">
+    <text x="10" y="15">Matrix</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <use xlink:href="#tensor_pro" x="30" y="30"/>
+    <use xlink:href="#tensor_calc" x="30" y="170"/>
+  </g>
+
   
   <g id="decomp_func">
     <use xlink:href="#func_2box" x="0" y="30"/>
@@ -148,14 +181,14 @@
     <text x="10" y="15">Matrix</text>
     <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
     <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
-    <use xlink:href="#matrix_basic" x="30" y="30"/>
     <use xlink:href="#decomp_func" x="30" y="310"/>
   </g>
 
 </defs>
 
   <use xlink:href="#ele_by" x="10" y="0"/>
-   <use xlink:href="#matrix" x="400" y="0"/>
+  <use xlink:href="#tensor" x="400" y="0"/>
+  <use xlink:href="#matrix" x="800" y="0"/>
 
  
 
