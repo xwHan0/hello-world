@@ -158,6 +158,18 @@
     <text x="65" y="135">(inner-product[!] &amp; tsrs)</text>
     <text x="65" y="165">(output-product[!] &amp; tsrs)</text>
   </g>
+
+  <g id="tensor_perf_opt">
+    <text x="10" y="15">Performance Optimized Function</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(add-inner-product! tsrAdd tsrPdtA tsrPdtB [factor])</text>
+    <text x="65" y="75">(add-product[!] tsrAdd tsrPdtA tsrPdtB)</text>
+    <text x="65" y="105">(add-row tsrAdd rowDes rowSrc factor])</text>
+    <text x="65" y="135">(add-scaled[!] tsrAdd a factor)</text>
+    <text x="65" y="165">(add-scaled-product[!] tsrAdd a b factor)</text>
+  </g>
   
   <g id="tensor">
     <text x="10" y="15">Tensor</text>
@@ -165,6 +177,7 @@
     <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
     <use xlink:href="#tensor_pro" x="30" y="30"/>
     <use xlink:href="#tensor_calc" x="30" y="170"/>
+    <use xlink:href="#tensor_perf_opt" x="30" y="400"/>
   </g>
 
   
