@@ -160,7 +160,7 @@
   </g>
   
   <g id="tensor">
-    <text x="10" y="15">Matrix</text>
+    <text x="10" y="15">Tensor</text>
     <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
     <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
     <use xlink:href="#tensor_pro" x="30" y="30"/>
