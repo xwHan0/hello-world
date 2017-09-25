@@ -5,8 +5,8 @@
 
 <defs>
   <g id="func_box">
-    <line x1="0" y1="15" x2="30" y2="15" stroke-width="1" stroke="#000000"/>
-    <rect x="30" width="300" height="30" fill="#eeeeee" stroke="#000000"/>
+    <line x1="0" y1="45" x2="30" y2="45" stroke-width="1" stroke="#000000"/>
+    <rect x="30" width="300" height="90" fill="#eeeeee" stroke="#000000"/>
   </g>
   <g id="func_box2">
     <use xlink:href="#func_box" x="0" y="0"/>
@@ -41,33 +41,19 @@
     <rect x="30" width="300" height="120" fill="#eeeeee" stroke="#000000"/>
   </g>
   
-
-  
-  <g id="ele_arithmetic">
-    <text x="10" y="15">arithmetic</text>
-    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
-    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
-    <use xlink:href="#func_box2" x="30" y="30"/>
-    <text x="65" y="165">(**|pow &amp; tersons)</text>
-    <text x="65" y="195">(log &amp; tersons)</text>
-  </g>
-  
-
-
-  
   
  
 
   
-  <g id="arithmatic_func">
-    <use xlink:href="#func_4box" x="0" y="0"/>
+  <g id="excel_func">
+    <use xlink:href="#func_box" x="0" y="0"/>
     <text y="15">
-      <tspan x="35" fill="blue">Arithmatic Function</tspan>
-      <tspan x="35" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] &amp; tsrs)</tspan>
-      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=add,minus,mul,div</tspan>
-      <tspan x="35" dy="20">Use default 0 to first parameter when </tspan> 
-      <tspan x="35" dy="20">has only one parameter for add and </tspan>
-      <tspan x="35" dy="20">minus. For mul and div it is 1.</tspan>
+      <tspan x="35" fill="blue">Relative Reference</tspan>
+      <tspan x="35" dy="20">Syntax: $h8</tspan>
+      <tspan x="35" dy="20">The offset between current cell and $h8</tspan>
+      <tspan x="35" dy="20"></tspan> 
+      <tspan x="35" dy="20"></tspan>
+      <tspan x="35" dy="20"></tspan>
     </text>
   </g>
   
@@ -287,11 +273,7 @@
 
 </defs>
   
-  <use xlink:href="#tensor" x="10" y="0"/>
-  <use xlink:href="#ele_by" x="400" y="0"/>
-  <use xlink:href="#tensor_compute" x="800" y="0"/>
-  <use xlink:href="#matrix" x="1200" y="0"/>
-  <use xlink:href="#broadcast" x="10" y="1000"/>
+  <use xlink:href="#excel_func" x="10" y="0"/>
  
 
 </svg>
