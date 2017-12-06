@@ -5,22 +5,21 @@
 <body>
 
 <p>
-SELECT selet-statement <br/>
-FROM from-statement <br/>
-<span id="syntax">[</span>WHERE where-statement<span id="syntax">]</span> <br/>
-<span id="syntax">[</span>ORDER order-statement<span id="syntax">]</span>
+ALTER TABLE table-name <br/>
+<span id="symbol">command</span>
 </p>
 
 <ul>
-<li>select-statement: Selection result columns
-  ::= * <span id="syntax">|</span> <span id="syntax">[</span>table.<span id="syntax">]</span>col-name,<span id="syntax">...</span>
+<li>Add-statement:
+  ::= ADD column-name column-type
   <ul>
   <li>* ::= Select all columns</li>
   <li>table ::= Table name or table alias name</li>
   <li>col ::= Column name</li>
   </ul>
 </li>
-<li>from-statement: Selected tables
+<li>Delete-statement: 
+  ::= DROP COLUMN column-name
   <ul>
   <li>There are two statements
     <ul>
@@ -31,8 +30,8 @@ FROM from-statement <br/>
   <li>tbl-identifier ::= tbl-name <span id="syntax">[</span> alias-name<span id="syntax">]</span></li>
   </ul>
 </li>
-<li>order-statement: Selected tables
-  ::= by col-name <span id="syntax">[</span>DESC<span id="syntax">]</span>
+<li>Edit-statement: 
+  ::= ALTER COLUMN column-name type
 </li>
 </ul>
 
