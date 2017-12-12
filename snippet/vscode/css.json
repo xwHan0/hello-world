@@ -1,0 +1,32 @@
+{
+  "flex div container" : {
+    "prefix" : "div top",
+    "body" : [
+      "display: flex;",
+      
+      "/*The direction of sub divs are laid out*/",
+      "flex-direction: ${1|row,row-reverse,column,column-reverse,inherit,iniyial,unset|};",
+      
+      "/**/",
+      "flex-wrap: ${2|nowrap,wrap,wrap-reverse}",
+      
+      "/*Sub divs flow aligned as main axis",
+      "  flex-start: 主轴开始位置",
+      "  flex-end: 主轴结束位置",
+      "  center: 主轴的中间",
+      "  space-between: 均匀散落，第一个和最后一个没有间隙，中间等间隔间隙",
+      "  space-around: 每个子项前后都插入等间隔空隙*/",
+      "justify-content: ${3|flex-start,flex-end,center,space-between,space-around}",
+      
+      "/*Sub divs flow aligned as assist axis",
+      "  stretch: 子项拉伸铺满父项从轴方向",
+      "  baseline: 子项对齐到父项从轴基线*/",
+      "align-items: ${4|flex-start,flex-end,center,stretch,baseline}",
+      
+      "/*Sub divs flow aligned as assist axis among multi-line",
+      "  */",
+      "align-content: ${5|flex-start,flex-end,center,stretch,space-between,space-around}"
+    ],
+    "description" : "div flex configure"
+  }
+}
