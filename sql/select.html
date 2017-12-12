@@ -8,7 +8,8 @@
 SELECT selet-statement <br/>
 FROM from-statement <br/>
 <span id="syntax">[</span>WHERE where-statement<span id="syntax">]</span> <br/>
-<span id="syntax">[</span>ORDER order-statement<span id="syntax">]</span>
+<span id="syntax">[</span>ORDER order-statement<span id="syntax">]</span> <br/>
+<span id="syntax">[</span>GROUP-BY order-statement<span id="syntax">]</span>
 </p>
 
 <ul>
@@ -32,7 +33,10 @@ FROM from-statement <br/>
   </ul>
 </li>
 <li>order-statement: Selected tables
-  ::= by col-name <span id="syntax">[</span>DESC<span id="syntax">]</span>
+  ::= by col-name ,<span id="syntax">...</span><span id="syntax">[</span>ASC<span id="syntax">|</span>DESC<span id="syntax">]</span>
+</li>
+<li>group-statement: Selected tables
+  ::= by col-name ,<span id="syntax">...</span><span id="syntax">[</span>ASC<span id="syntax">|</span>DESC<span id="syntax">]</span>
 </li>
 </ul>
 
