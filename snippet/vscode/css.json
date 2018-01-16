@@ -1,27 +1,49 @@
 {
-  "flex div container" : {
-    "prefix" : "div top",
+  "flex box container" : {
+    "prefix" : "flex container",
     "body" : [
       "display: flex;",
       
-      "/*The direction of sub divs are laid out*/",
-      "flex-direction: ${1|row,row-reverse,column,column-reverse,inherit,iniyial,unset|};",
+      "/* [flex-direction] [flex-wrap]",
+      "   flex-direction defines the main axis of flex items laid out",
+      "   and flex-wrap specifies whether flex items are forced into a single line or can be wrapped onto multiple lines.  */",
+      "flex-flow: ${1|row,row-reverse,column,column-reverse|} ${2|nowrap,wrap,wrap-reverse};",
       
-      "/**/",
-      "flex-wrap: ${2|nowrap,wrap,wrap-reverse}",
-      
-      "/*Sub divs flow aligned as main axis",
+      "/*Flex items flow aligned as main axis",
       "  flex-start: 主轴开始位置",
       "  flex-end: 主轴结束位置",
       "  center: 主轴的中间",
       "  space-between: 均匀散落，第一个和最后一个没有间隙，中间等间隔间隙",
-      "  space-around: 每个子项前后都插入等间隔空隙*/",
-      "justify-content: ${3|flex-start,flex-end,center,space-between,space-around}",
+      "  space-around: 每个子项前后都插入等间隔空隙",
+      "  space-evenly:   */",
+      "justify-content: ${3|flex-start,flex-end,center,space-between,space-around,space-evenly,stretch|}",
       
-      "/*Sub divs flow aligned as assist axis",
-      "  stretch: 子项拉伸铺满父项从轴方向",
-      "  baseline: 子项对齐到父项从轴基线*/",
-      "align-items: ${4|flex-start,flex-end,center,stretch,baseline}",
+      "/*Flex items are laid out as cross axis",
+      "  Please refer to 'justify-content'   */",
+      "align-items: ${4|flex-start,flex-end,center,space-between,space-around,space-evenly,stretch}",
+      
+      "/*Sub divs flow aligned as assist axis among multi-line",
+      "  */",
+      "align-content: ${5|flex-start,flex-end,center,stretch,space-between,space-around}"
+    ],
+    "description" : "div flex configure"
+  },
+  
+  "flex box item" : {
+    "prefix" : "flex item",
+    "body" : [
+      
+      "/* [flex-grow] [flex-shrink] [flex-basis]",
+      "   flex-grow specifies what amount of space inside the flex container the item should take up.",
+      "   flex-shrink specifies the flex shrink factor of a flex item. Flex items will shrink to fill the container according to the flex-shrink number, when the default width of flex items is wider than the flex container. ",
+      "   flex-basis  specifies the initial main size of a flex item*/",
+      "flex: ${1:0} ${2:1} ${3:auto};",
+      
+    
+      "/*Flex item are laid out as cross axis",
+      "  Please refer to 'justify-content'  ",
+      "  This property is override align-items.*/",
+      "align-self: ${4|flex-start,flex-end,center,stretch,baseline}",
       
       "/*Sub divs flow aligned as assist axis among multi-line",
       "  */",

@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/syntax.css"/>
+</head>
+<body>
+
+<h1>Principle</h1>
+<h2>Clock Synchronism</h2>
+<h3>Sync-Ethernet Solution</h3>
+<p>Recovery data clock from HSS's CDR.</p>
+<h3>1588v2 Solution</h3>
+<pre>
+(defn clock-radio [t0-master t0-slaver t1-master t1-slaver]
+"
+# Parameter
+  * t0-master: 
+  * t0-master:
+# Return
+  Clock factor between master and slaver.
+"
+  (let []
+    (/ (- t1-master t0-master) (- t1-slaver t0-slaver))))
+</pre>
+
+</body>
+</html>
